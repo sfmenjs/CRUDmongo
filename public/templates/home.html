@@ -1,0 +1,12 @@
+<md-content layout layout-wrap>
+  <div flex="33" ng-repeat="d in vm.dinos">
+    <md-card layout-padding layout="column" ui-sref="DinoDetails({id: d._id})">
+      <div layout style="background-color: rgb(120, 120, 120);">
+        <img ng-src="{{d.imageUrl}}" ng-alt="{{d.name}}" style="width: 90%; height: auto; max-height: 250px; margin: auto;" />
+      </div>
+      <div layout>
+        <i>Name: </i> {{d.name}}
+      </div>
+    </md-card>
+  </div>
+</md-content>

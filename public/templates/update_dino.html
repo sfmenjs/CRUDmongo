@@ -1,0 +1,49 @@
+<md-content>
+  <md-card layout-padding>
+    <form ng-submit="vm.updateDino()">
+      <div layout layout-align="center">
+        <h1>Update Your Dino</h1>
+      </div>
+      <md-input-container>
+        <label>Name</label>
+        <input type="text" ng-model="vm.dino.name" required />
+      </md-input-container>
+      <md-input-container>
+        <label>Image URL</label>
+        <input type="text" ng-model="vm.dino.imageUrl" required />
+      </md-input-container>
+      <md-input-container>
+        <label>Era</label>
+        <input type="text" ng-model="vm.dino.era" required />
+      </md-input-container>
+      <md-input-container>
+        <label>Diet</label>
+        <md-select ng-model="vm.dino.diet">
+          <md-option value="Omnivore">Omnivore</md-option>
+          <md-option value="Carnivore">Carnivore</md-option>
+          <md-option value="Herbivore">Herbivore</md-option>
+        </md-select>
+      </md-input-container>
+      <div layout="row">
+        <md-input-container flex="50">
+          <label>Color</label>
+          <input type="text" ng-model="vm.dino.looks.color" />
+        </md-input-container>
+        <md-input-container flex="50">
+          <label>Pattern</label>
+          <input type="text" ng-model="vm.dino.looks.pattern" />
+        </md-input-container>
+      </div>
+      <md-input-container>
+        <label>Can it Fly?</label>
+        <md-select ng-model="vm.dino.canFly">
+          <md-option value="true">Yes</md-option>
+          <md-option value="false">No</md-option>
+        </md-select>
+      </md-input-container>
+      <div layout layout-align="center">
+        <md-button type="submit" class="md-raised md-warn">Submit</md-button>
+      </div>
+    </form>
+  </md-card>
+</md-content>

@@ -1,0 +1,19 @@
+<md-content>
+  <md-card>
+    <div layout layout-align="center">
+      <h1>{{vm.dino.name}}</h1>
+    </div>
+    <div style="margin: auto">
+      <img ng-src="{{vm.dino.imageUrl}}" ng-alt="{{vm.dino.name}}" />
+    </div>
+    <h3><i>Era: </i> {{vm.dino.era}}</h3>
+    <h3><i>Diet: </i> {{vm.dino.diet}}</h3>
+    <h3><i>Looks: </i> {{vm.dino.looks.color}} and {{vm.dino.looks.pattern}}</h3>
+    <h3 ng-show="vm.dino.canFly">IT CAN FLY!</h3>
+    <h3 ng-show="!vm.dino.canFly">IT CAN FALL REALLY FAST!</h3>
+    <div layout layout-align="center">
+      <md-button class="md-raised md-primary" ui-sref="UpdateDino({id: vm.dino._id})">Edit</md-button>
+      <md-button class="md-raised md-warn" ng-click="vm.deleteDino();">!Delete!</md-button>
+    </div>
+  </md-card>
+</md-content>
